@@ -1,0 +1,19 @@
+{
+  "name": "Sis-ViaCEP",
+  "version": "1.0.0",
+  "description": "Projeto de buscar cep consumindo api do via cep com nodeJS",
+  "main": "backend/src/index.js",
+  "author": "Ademar Pedro",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx nodemon ../backend/src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}

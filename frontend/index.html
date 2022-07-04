@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+
+  <style>
+    input, button {
+        height:2.5rem;
+        border-radius: 5px;
+        border-width: 1px;
+        padding:5px;
+    }
+    
+    input {
+        background-color : white;
+        outline: none;
+    }
+    
+    button {
+        background-color : cornflowerblue;
+        color : white;
+    }
+    
+    button:hover {
+        background-color :blue;
+    }
+    </style>
+</head>
+<body>
+
+<form id="form">
+<input type="text" class="form-control" id="cep" placeholder="Digite um CEP válido">
+<button id="buscaCep" type="submit">Buscar endereço</button>
+</form>
+
+<script src="scripts.js" type="text/javascript"></script>
+</body>
+</html>
