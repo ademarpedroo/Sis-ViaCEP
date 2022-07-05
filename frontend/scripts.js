@@ -6,7 +6,9 @@ async function handleSubmit(event) {
   event.preventDefault();
   
   const cepInputValue = document.getElementById('cep').value;
-  
+  const resultContainer = document.getElementById('resultado');
+
+
   const cepResponse = await fetch('http://localhost:3000/busca_cep',{
     method: 'POST',
     body: JSON.stringify({
@@ -16,6 +18,14 @@ async function handleSubmit(event) {
       'Content-Type': 'application/json'
     }
   })
-  responseBody = await cepResponse.json();
+  const responseBody = await cepResponse.json();
   console.log(responseBody)
+
+  const layout = `
+    <span>Cep: ${cepInputValue}</span>
+    <span>Cidade: ${responseBody.localidade}</span>
+    <span>Logradouro: ${responseBody.logradouro}</span>
+  `
+
+  resultContainer.innerHTML = layout;
 }
