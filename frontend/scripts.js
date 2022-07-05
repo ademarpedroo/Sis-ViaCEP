@@ -1,15 +1,11 @@
 const form = document.getElementById('form');
 form.addEventListener('submit', handleSubmit);
 
-const cepValido = (cep) =>/\d{2}\.\d{3}\-\d{3}/;
-
 async function handleSubmit(event) {
   event.preventDefault();
 
   const cepInputValue = document.getElementById('cep').value;
   const resultContainer = document.getElementById('resultado');
-
-  if (cepValido(cep)){
 
       const cepResponse = await fetch('http://localhost:3000/busca_cep',{
         method: 'POST',
@@ -74,7 +70,4 @@ async function handleSubmit(event) {
           `
           resultContainer.innerHTML = layout;
         }
-      }else{
-        Swal.fire('Cep invalido')  
-  }
 }
