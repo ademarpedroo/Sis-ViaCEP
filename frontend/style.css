@@ -6,3 +6,6 @@ body {
   color: #000;
   height: 100vh;
 }
+section {
+  padding: 2rem 30rem;
+}
